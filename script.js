@@ -12,9 +12,11 @@ async function checkWeather() {
 
   const year = date.getFullYear();
   const day = date.getDay();
+  const month = date.getMonth() + 1;
+
   document.getElementById("input").value = "";
   const data = await fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year}-11-27?key=UYHMPVGP4MTZKXZUHM65LDGFF`
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year}-${month}-30?key=UYHMPVGP4MTZKXZUHM65LDGFF`
   );
   const res = await data.json();
   console.log(res);
