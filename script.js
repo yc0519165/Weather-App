@@ -6,6 +6,8 @@ const speed = document.getElementById("speed");
 
 //"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/pune/2024-11-27?key=UYHMPVGP4MTZKXZUHM65LDGFF"
 
+// MA85H3QBHK3FGLU79LG3XRJM7
+
 async function checkWeather() {
   const city = input.value;
   const date = new Date();
@@ -16,7 +18,7 @@ async function checkWeather() {
 
   document.getElementById("input").value = "";
   const data = await fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year}-${month}-30?key=UYHMPVGP4MTZKXZUHM65LDGFF`
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${year}-${month}-30?key=MA85H3QBHK3FGLU79LG3XRJM7`
   );
   const res = await data.json();
   console.log(res);
